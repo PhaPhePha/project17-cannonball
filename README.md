@@ -1,5 +1,5 @@
-# Dự án 17 — Dự đoán quỹ đạo viên đạn
-
+# Project 17 - Predict the Flight of a Cannonball - KOTLIN FROM SCRATCH
+Dự án 17: Dự đoán quỹ đạo viên đạn
 Ứng dụng máy tính viết bằng Kotlin và JavaFX. Ứng dụng mô phỏng chuyển động ném xiên, vẽ quỹ đạo bay và sử dụng phương pháp chia đôi để tìm góc phóng đạt khoảng cách mục tiêu.
 
 ## Yêu cầu
