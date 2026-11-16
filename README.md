@@ -22,11 +22,20 @@ Trên Windows PowerShell, chạy lệnh trên từ thư mục dự án. Dự án
 Lệnh mặc định thực hiện `clean`, `compile` rồi mới chạy JavaFX. Nếu chỉ muốn
 biên dịch và chạy kiểm tra, dùng:
 
-Để chỉ biên dịch và kiểm tra:
-
 ```powershell
 .\run.ps1 test
 ```
+
+## Cấu trúc mã nguồn
+
+- `Main.kt`: điểm khởi chạy ứng dụng.
+- `CannonballApp.kt`: lớp giao diện JavaFX, xử lý input và sự kiện nút bấm.
+- `Physics.kt`: các công thức mô phỏng và thuật toán tìm góc bằng Bisection.
+- `FlightResult.kt`: mô hình dữ liệu lưu kết quả mô phỏng.
+
+Cách tách này giúp phần giao diện, logic nghiệp vụ và dữ liệu có trách nhiệm
+riêng, dễ kiểm thử và thể hiện rõ hơn tính đóng gói, trừu tượng hóa và phân
+tách trách nhiệm trong OOP.
 
 Nếu PowerShell chặn script, chạy một lần:
 
@@ -47,7 +56,8 @@ Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
 - **Đặt lại** khôi phục các giá trị mẫu.
 - Dữ liệu không hợp lệ và mục tiêu không thể đạt được sẽ được thông báo trong khu vực kết quả.
 
-Ví dụ mặc định: vận tốc 30 m/s, góc 45°, độ cao 2 m và mục tiêu 70 m.
+Khi mở ứng dụng, các field để trống để người dùng tự nhập dữ liệu. Có thể
+dùng dấu chấm hoặc dấu phẩy cho phần thập phân, ví dụ `70.5` hoặc `70,5`.
 
 ## Kiểm thử
 

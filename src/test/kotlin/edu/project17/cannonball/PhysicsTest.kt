@@ -8,6 +8,11 @@ import org.junit.jupiter.api.Test
 
 class PhysicsTest {
     @Test
+    fun `input parser accepts comma decimal separator`() {
+        assertEquals(70.5, InputParser.parse("70,5", "invalid"), 1e-9)
+    }
+
+    @Test
     fun `landing distance matches reference values`() {
         val distance = Physics.landingDistance(30.0, 45.0, 2.0)
 
